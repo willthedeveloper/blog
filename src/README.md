@@ -1,7 +1,9 @@
 # Development
 
-* Build: `npx @11ty/eleventy`
-* Run a local server: `npx @11ty/eleventy --serve`
+* Install dependencies: `npm install`
+* Run locally: `npm start`
 
 # Todo
-- Get hot reloading working again
+- Upodate prettier settings to remove that trailing comma
+- Font installed
+- https://tailwindcss.com/
