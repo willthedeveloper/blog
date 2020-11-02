@@ -7,7 +7,8 @@
 
 ### Todo
 - [ ] DVD screensaver background
-    - Create a homepage directory structure with an "Enter" button that takes us to the real place.
+    - [x] Create a homepage directory structure with an "Enter" button that takes us to the real place.
+    - [ ] All logo images load immediately 
 
 ### Credits
 

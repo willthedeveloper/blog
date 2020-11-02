@@ -1,4 +1,32 @@
----
-layout: blank.liquid
-pageTitle: Welcome
----
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ pageTitle }}</title>
+    <style>
+        {% include css/main.css %}
+    </style>
+</head>
+
+<body>
+        <a href="/posts"
+            style="position: absolute; bottom: 40px; right: 40px; color:blue; background-color:white; padding: 10px; font-size: 36px;"> >> stop this
+            madness
+        </a>
+    <iframe src="https://dvd-screensaver.surge.sh" id="dvd-screensaver" frameborder="0" width="100%"></iframe>
+    <script>
+        function fitScreensaver(id) {
+            const el = document.getElementById("dvd-screensaver");
+            el.height = window.innerHeight;
+        }
+
+        fitScreensaver();
+        window.addEventListener("resize", fitScreensaver)
+    </script>
+
+
+</body>
+
+</html>
