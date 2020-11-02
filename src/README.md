@@ -4,4 +4,8 @@
 * Run locally: `npm start`
 
 # Todo
-- https://tailwindcss.com/
+- DVD screensaver background
+
+### Credits
+
+- Theme: [Bahunya](https://github.com/Kimeiga/bahunya)
