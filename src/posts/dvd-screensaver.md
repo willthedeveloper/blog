@@ -7,7 +7,7 @@ Before I prattle on, here is [the working website](dvd-screensaver.surge.sh).
 
 -----
 
-Remember the DVD screensaver? And how you'd watch that colorful logo bouncing around the screen, lazily hoping that it would [hit a corner perfectly](https://www.youtube.com/watch?v=QOtuX0jL85Y) as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?
+<strong>Remember the DVD screensaver</strong>? And how you'd watch that colorful logo bouncing around the screen, lazily hoping that it would [hit a corner perfectly](https://www.youtube.com/watch?v=QOtuX0jL85Y) as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?
 
 I made it for the browser. And like so many of my projects, I went ahead and built it before checking to see if anyone had done it before.
 
@@ -19,17 +19,19 @@ I'm proud to say that my screensaver boasts a few features that the competition 
 
 ### Multiple logos
 
-That's right. Logos will appear wherever you click on screen.
+That's right. When you click, they'll come. Try holding down the mouse.
 
 <video src="https://media.giphy.com/media/l4HNje70Q8YNQqzl39/giphy.mp4" type="video/mp4" autoplay loop></video> 
 
 ### Collision detection
 
-And if we're going to have multiple logos, we may as well have them collide off of each other, right?
-That should be easy, right?
-Wrong.
+If we're going to have multiple logos, we may as well have them collide off of each other, right?
 
-<video src="https://media.giphy.com/media/w12zsAFSay2WK0Jd5F/giphy.mp4" type="video/mp4" autoplay loop></video> 
+That should be easy, right?
+
+![confusing whiteboard](/assets/img/posts/dvd-screensaver/whiteboard.jpg)
+
+Naw.
 
 I knew that I had heard the term "collision detection" before, but I didn't realize that it was the subject of at least one [590-page programming book](https://realtimecollisiondetection.net/).
 
@@ -41,16 +43,16 @@ So, instead of recreating a branch of science on my own, I popped open YouTube. 
 
 The algorithm: the animation generates a new frame at least 30 times per second. Every frame, we draw a "ray" from the center of each rectangle along its vector. If that ray intersects another rectangle, then we've found a collision. Easier said than done.
 
-![confusing whiteboard](/assets/img/posts/dvd-screensaver/whiteboard.jpg)
+<video src="https://media.giphy.com/media/w12zsAFSay2WK0Jd5F/giphy.mp4" type="video/mp4" autoplay loop></video> 
 
-Honestly, I still don't fully understand the math here. It drift in and out of focus for me depending on how much sleep I got. You'll notice that things don't always collide neatly.
+Honestly, I still don't fully understand the math here. It drift in and out of focus for me depending on how much coffee I've had.
 
 #### Checking a bunch of rectangles
 
 So how do we check every rectangle on screen 30 times per second?
-- 🥵 <mark>Inefficient but easy</mark>: check every rectangle against every other rectangle, every frame.
-- 🥶 <mark>Efficient but hard</mark>: make an "octree"/"oct tree"/"ostrich"... I don't know what these are.
-- 👌 <mark>Just right</mark>: sort 'n' sweep! Sort the rectangles along their highest variance axis. That way, we don't have to check every rectangle against every other rectangle. I followed [@thebennybox's tutorial](https://www.youtube.com/watch?v=bCgF8fzwFvc) to figure this out.
+- 🥵 <mark>Inefficient but easy:</mark> check every rectangle against every other rectangle, every frame.
+- 🥶 <mark>Efficient but hard:</mark> make an "octree"/"oct tree"/"ostrich"... I don't know what these are.
+- 👌 <mark>Just right:</mark><strong> sort 'n' sweep</strong>! Sort the rectangles along their highest variance axis, so that we don't have to check every rectangle against every other rectangle. If we sort rectangles along the x-axis, for example, and rectangle 1 doesn't collide with rectangle 2, then we know for sure it won't collide with rectangle 3 or above, so we can skip all those checks. I followed [@thebennybox's tutorial](https://www.youtube.com/watch?v=bCgF8fzwFvc) to figure this out.
 
 ### Controlling time
 
@@ -64,7 +66,7 @@ I'm not saying that you can control time. I'm trying to tell you that when you'r
 
 You can resize the page and things will still work! Whenever the `"resize"` event fires, we re-initialize the canvas with the window's new dimensions. I didn't need physics class to figure *that* out, HA.
 
-### Other nerdy stuff for the nerds
+### Other nerdy stuff for nerds
 
 #### Javascript classes
 
@@ -83,7 +85,7 @@ I wanted to keep things organized, and ended up documenting everything using JSD
 
 _____
 
-OK that's all.
+OK that's all. Maybe that physics class was useful after all.
 
 Here's the [Github repo](https://github.com/willthefirst/dvd-screensaver).  
 Built during my (remote) time at [Recurse Center](www.recurse.com).
