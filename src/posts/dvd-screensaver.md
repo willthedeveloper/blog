@@ -81,7 +81,7 @@ For this kind of work, a debugger is pretty much essential. Since I am a pathalo
 
 #### JSDocs
 
-I wanted to keep things organized, and ended up documenting everything using JSDocs syntax. It's overkill for a fun project like this, but it was a good chance to learn how to write better documentation.
+I wanted to keep things organized, and ended up documenting everything using JSDocs syntax. It's overkill for a fun project like this, but it was a good chance to learn how to write better documentation. [Here are generated docs](https://dvd-screensaver.surge.sh/docs/Logo.html).
 
 _____
 
