@@ -1,5 +1,9 @@
 # Portfolio website
 
+### Live version
+
+Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
+
 ### Development
 
 * Install dependencies: `npm install`

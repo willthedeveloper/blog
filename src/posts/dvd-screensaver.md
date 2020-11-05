@@ -1,10 +1,11 @@
 ---
-pageTitle: Remaking the bouncing DVD logo in Javascript
+pageTitle: Making the bouncing DVD logo in Javascript
+date: Last Modified
+datePosted: 2020-11-04
 ---
 Before I prattle on, here is [the working website](dvd-screensaver.surge.sh).
 
 -----
-
 
 Remember the DVD screensaver? And how you'd watch that colorful logo bouncing around the screen, lazily hoping that it would [hit a corner perfectly](https://www.youtube.com/watch?v=QOtuX0jL85Y) as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?
 
