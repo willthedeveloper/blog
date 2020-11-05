@@ -3,7 +3,7 @@ pageTitle: Making the bouncing DVD logo in Javascript
 date: Last Modified
 datePosted: 2020-11-04
 ---
-Before I prattle on, here is [the working website](dvd-screensaver.surge.sh).
+Before I prattle on, here is [the working website](https://dvd-screensaver.surge.sh).
 
 -----
 
