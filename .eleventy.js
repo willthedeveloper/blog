@@ -3,7 +3,7 @@ const embedYouTube = require("eleventy-plugin-youtube-embed");
 module.exports = function (eleventyConfig) {
 	// Make dates local timezone
 	eleventyConfig.addLiquidFilter("toUTC", function (date) {
-		return `${date.getUTCMonth() + 1}-${date.getUTCDay() - 1}-${date.getUTCFullYear()}`;
+		return `${date.getUTCMonth() + 1}-${date.getUTCDate()}-${date.getUTCFullYear()}`;
 	});
 
 	// Embeddable YouTube videos
