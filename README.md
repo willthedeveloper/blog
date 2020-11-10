@@ -10,8 +10,6 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
 * Run locally: `npm start`
 
 ### Todo
-- [ ] Proofread everything
-- [ ] Smaller/prettier h1s
 - [ ] Make sure eleventy cleans out _site before rebuilding
 - [ ] Target blank for links in posts
 - [x] DVD screensaver background
@@ -20,6 +18,8 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
 - [x] Fix date issue
 - [x] Create relative image directory structure for posts
     - [x] Replace current references with  this.
+- [x] Proofread everything
+- [x] Smaller/prettier h1s
 
 ### Ideas
 - [ ] An easy flow for notifying me of typos
