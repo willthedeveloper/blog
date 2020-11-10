@@ -18,26 +18,27 @@
         <article>
             <p>Before I prattle on, here is <a href="https://dvd-screensaver.surge.sh">the working website</a>.</p>
 <hr>
-<p><strong>Remember the DVD screensaver</strong>? And how you'd watch that colorful logo bouncing around the screen, lazily hoping that it would <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y">hit a corner perfectly</a> as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?</p>
+<p><strong>Remember the DVD screensaver</strong>? And how you'd watch that colorful logo bounce around the screen, lazily hoping that it would <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y">hit a corner perfectly</a> as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?</p>
 <p>I made it for the browser. And like so many of my projects, I went ahead and built it before checking to see if anyone had done it before.</p>
 <p><a href="https://bouncingdvdlogo.com/">Plenty</a>. <a href="https://dvdscreensaver.online/">People</a>. <a href="https://santumerino.itch.io/dvd-screensaver-simulator">Have</a>.</p>
 <p>But don't leave yet!</p>
 <p>I'm proud to say that my screensaver boasts a few features that the competition doesn't:</p>
 <h3>Multiple logos</h3>
-<p>That's right. When you click, they'll come. Try holding down the mouse.</p>
+<p>That's right. When you click, they'll come. Holding down the mouse makes it rain.</p>
 <p><video src="https://media.giphy.com/media/l4HNje70Q8YNQqzl39/giphy.mp4" type="video/mp4" autoplay loop></video></p>
 <h3>Collision detection</h3>
-<p>If we're going to have multiple logos, we may as well have them collide off of each other, right?</p>
+<p>And, if we're going to have multiple logos, we may as well have them collide off of each other, right?</p>
 <p>That should be easy, right?</p>
+<p>I remember high school math, right?</p>
 <p><img src="whiteboard.jpg" alt="confusing whiteboard"></p>
-<p>Naw.</p>
-<p>I knew that I had heard the term &quot;collision detection&quot; before, but I didn't realize that it was the subject of at least one <a href="https://realtimecollisiondetection.net/">590-page programming book</a>.</p>
+<p>Wrong. Wrong wrong wrong.</p>
+<p>I knew that I had heard the term &quot;collision detection&quot; before, but I didn't realize that it was the subject of a <a href="https://realtimecollisiondetection.net/">590-page programming book</a>.</p>
 <p>Initially, I tried to write this from the ground up, thinking about how an object in real life 'knows' when it has collided with something. Then I remembered that there's a thing called &quot;physics&quot; that I <em>would</em> have learned about had Mr. Astruc shown up to class that day instead of that poor sub who couldn't get the DVD player working.</p>
 <h4>Finding intersecting rectangles</h4>
 <p>So, instead of recreating a branch of science on my own, I popped open YouTube. I followed <a href="https://www.youtube.com/watch?v=8JJ-4JgR7Dg&amp;list=LL&amp;index=5">javidx9's tutorial</a> to detect collisions between moving rectangles.</p>
 <p>The algorithm: the animation generates a new frame at least 30 times per second. Every frame, we draw a &quot;ray&quot; from the center of each rectangle along its vector. If that ray intersects another rectangle, then we've found a collision. Easier said than done.</p>
 <p><video src="https://media.giphy.com/media/w12zsAFSay2WK0Jd5F/giphy.mp4" type="video/mp4" autoplay loop></video></p>
-<p>Honestly, I still don't fully understand the math here. It drift in and out of focus for me depending on how much coffee I've had.</p>
+<p>Honestly, I still don't fully understand the math here. It drifts in and out of focus depending on how much coffee I've had.</p>
 <h4>Checking a bunch of rectangles</h4>
 <p>So how do we check every rectangle on screen 30 times per second?</p>
 <ul>

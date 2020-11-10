@@ -5,7 +5,7 @@ Before I prattle on, here is [the working website](https://dvd-screensaver.surge
 
 -----
 
-<strong>Remember the DVD screensaver</strong>? And how you'd watch that colorful logo bouncing around the screen, lazily hoping that it would [hit a corner perfectly](https://www.youtube.com/watch?v=QOtuX0jL85Y) as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?
+<strong>Remember the DVD screensaver</strong>? And how you'd watch that colorful logo bounce around the screen, lazily hoping that it would [hit a corner perfectly](https://www.youtube.com/watch?v=QOtuX0jL85Y) as you waited for the sub to fix the the clunky Panasonic TV as he tried to get the movie going in order to finally sedate this roudy bunch of high school juniors?
 
 I made it for the browser. And like so many of my projects, I went ahead and built it before checking to see if anyone had done it before.
 
@@ -17,21 +17,23 @@ I'm proud to say that my screensaver boasts a few features that the competition 
 
 ### Multiple logos
 
-That's right. When you click, they'll come. Try holding down the mouse.
+That's right. When you click, they'll come. Holding down the mouse makes it rain.
 
 <video src="https://media.giphy.com/media/l4HNje70Q8YNQqzl39/giphy.mp4" type="video/mp4" autoplay loop></video> 
 
 ### Collision detection
 
-If we're going to have multiple logos, we may as well have them collide off of each other, right?
+And, if we're going to have multiple logos, we may as well have them collide off of each other, right?
 
 That should be easy, right?
 
+I remember high school math, right?
+
 ![confusing whiteboard](whiteboard.jpg)
 
-Naw.
+Wrong. Wrong wrong wrong.
 
-I knew that I had heard the term "collision detection" before, but I didn't realize that it was the subject of at least one [590-page programming book](https://realtimecollisiondetection.net/).
+I knew that I had heard the term "collision detection" before, but I didn't realize that it was the subject of a [590-page programming book](https://realtimecollisiondetection.net/).
 
 Initially, I tried to write this from the ground up, thinking about how an object in real life 'knows' when it has collided with something. Then I remembered that there's a thing called "physics" that I *would* have learned about had Mr. Astruc shown up to class that day instead of that poor sub who couldn't get the DVD player working.
 
@@ -43,7 +45,7 @@ The algorithm: the animation generates a new frame at least 30 times per second.
 
 <video src="https://media.giphy.com/media/w12zsAFSay2WK0Jd5F/giphy.mp4" type="video/mp4" autoplay loop></video> 
 
-Honestly, I still don't fully understand the math here. It drift in and out of focus for me depending on how much coffee I've had.
+Honestly, I still don't fully understand the math here. It drifts in and out of focus depending on how much coffee I've had.
 
 #### Checking a bunch of rectangles
 
