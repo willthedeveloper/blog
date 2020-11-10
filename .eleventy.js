@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
 	// Make dates local timezone
 	eleventyConfig.addLiquidFilter("toUTC", function(date) {
-		return `${date.getUTCMonth()}-${date.getUTCDay()}-${date.getUTCFullYear()}`;
+		return `${date.getUTCMonth() + 1}-${date.getUTCDay() - 1}-${date.getUTCFullYear()}`;
 	});
 
 	// Build

@@ -1,7 +1,5 @@
 ---
 pageTitle: Making the DVD screensaver in Javascript
-date: Last Modified
-datePosted: 2020-11-04
 ---
 Before I prattle on, here is [the working website](https://dvd-screensaver.surge.sh).
 
