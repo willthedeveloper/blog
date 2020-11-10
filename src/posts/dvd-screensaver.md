@@ -1,5 +1,5 @@
 ---
-pageTitle: Making the bouncing DVD logo in Javascript
+pageTitle: Making the DVD screensaver in Javascript
 date: Last Modified
 datePosted: 2020-11-04
 ---
