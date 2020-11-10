@@ -4,7 +4,9 @@
   "description": "eleventy --serve",
   "main": "index.js",
   "scripts": {
-    "start": "gulp build & gulp watch & eleventy --serve"
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "start": "gulp watch & eleventy --serve"
   },
   "keywords": [],
   "author": "Will Moritz",
@@ -15,6 +17,7 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "eleventy-plugin-youtube-embed": "^1.4.8"
+    "eleventy-plugin-youtube-embed": "^1.4.8",
+    "fs-extra": "^9.0.1"
   }
 }

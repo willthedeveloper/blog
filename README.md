@@ -10,7 +10,6 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
 * Run locally: `npm start`
 
 ### Todo
-- [ ] Make sure eleventy cleans out _site before rebuilding
 - [ ] Target blank for links in posts
 - [x] DVD screensaver background
     - [x] Create a homepage directory structure with an "Enter" button that takes us to the real place.
@@ -20,9 +19,12 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
     - [x] Replace current references with  this.
 - [x] Proofread everything
 - [x] Smaller/prettier h1s
+- [x] Make sure eleventy cleans out _site before rebuilding
+    - Didn't really do it. Gulp and Eleventy have some concurrency that makes this difficult.
 
 ### Ideas
 - [ ] An easy flow for notifying me of typos
+- [ ] A console easter egg
 
 ### Credits
 
