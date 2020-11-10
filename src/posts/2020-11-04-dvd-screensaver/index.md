@@ -27,7 +27,7 @@ If we're going to have multiple logos, we may as well have them collide off of e
 
 That should be easy, right?
 
-![confusing whiteboard](/assets/img/posts/dvd-screensaver/whiteboard.jpg)
+![confusing whiteboard](whiteboard.jpg)
 
 Naw.
 

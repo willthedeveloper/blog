@@ -9,9 +9,9 @@ module.exports = function (eleventyConfig) {
 	// Embeddable YouTube videos
 	eleventyConfig.addPlugin(embedYouTube);
 
-	// Build
-	eleventyConfig.addPassthroughCopy("src/assets/fonts");
+	// Copy image assets to build
 	eleventyConfig.addPassthroughCopy("src/assets/img");
+	eleventyConfig.addPassthroughCopy("src/posts/**/*.jpg");
 
 	return {
 		dir: {
