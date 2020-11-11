@@ -12,7 +12,8 @@ module.exports = function (eleventyConfig) {
 	// Copy image assets to build
 	eleventyConfig.addPassthroughCopy("src/assets/img");
 	eleventyConfig.addPassthroughCopy("src/posts/**/*.jpg");
-
+	eleventyConfig.addPassthroughCopy("src/posts/**/*.png");
+	
 	return {
 		dir: {
 			input: "src"
