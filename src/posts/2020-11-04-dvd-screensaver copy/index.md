@@ -87,5 +87,5 @@ _____
 
 OK that's all. Maybe that physics class was useful after all.
 
-Here's the [Github repo](https://github.com/willthefirst/dvd-screensaver).  
+Here's the [Github repo](https://github.com/willthedeveloper/dvd-screensaver).  
 Built during my (remote) time at [Recurse Center](www.recurse.com).

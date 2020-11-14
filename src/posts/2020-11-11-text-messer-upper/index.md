@@ -18,7 +18,7 @@ Still though, a "bad underlining" library?! It's got legs.
 
 From that idea, I remembered the dumb viral web thing [Font Bomb](https://fontbomb.ilex.ca/), and, inspired, we decided to write a library that could make every letter on a webpage manipulable. The marketing department came up this name:
 
-### [letter-messer-upper.js](https://github.com/willthefirst/letter-messer-upper)
+### [letter-messer-upper.js](https://github.com/willthedeveloper/letter-messer-upper)
 
 We do the hard work of crawling the DOM and wrapping every element in a `span`. Then, it's up to the developer to decide how to mess up every letter.
 
@@ -143,4 +143,4 @@ The possibilities are endless. I'd love to make it easier to work with, so that 
 
 Typescript, `createTreeWalker` (which knows how to crawl [the DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTreeWalker)), and how hard it is to configure [Gulp](https://gulpjs.com/).
 
-Again, here's the [demo site](https://letter-messer-upper.surge.sh/) and the [Github repo](https://github.com/willthefirst/letter-messer-upper).
+Again, here's the [demo site](https://letter-messer-upper.surge.sh/) and the [Github repo](https://github.com/willthedeveloper/letter-messer-upper).
