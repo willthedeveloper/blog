@@ -11,8 +11,11 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
 
 ### Todo
 - [ ] Target blank for links in posts
+- [ ] Figcaption shortcuts
+    (then replace old ones)
 - [ ] Back to homepage navigation
 - [ ] Contact
+- [ ] Github embeds (then replace)
 - [x] DVD screensaver background
     - [x] Create a homepage directory structure with an "Enter" button that takes us to the real place.
     - [x] All logo images load immediately
