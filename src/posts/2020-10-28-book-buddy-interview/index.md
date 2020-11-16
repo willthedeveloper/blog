@@ -24,4 +24,4 @@ The app is no longer live, but here are some screenshots that show how it worked
 
 I felt like this app combined things that already existed at the time: a "tracking" interface similar to Github commit history or any habit tracking app, a rich text editor, etc. I left it in a place where I felt like it didn't do any of those things particularly well. At the very least, it sure was prettier and nicer to interact with than Goodreads.
 
-Here are Github links to the [front-end](https://github.com/willthedeveloper/book-buddy) and the [API](https://github.com/willthedeveloper/book-buddy-api).
+Here are Github links to the [front-end](https://github.com/willthefirst/book-buddy) and the [API](https://github.com/willthefirst/book-buddy-api).
