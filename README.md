@@ -2,7 +2,7 @@
 
 ### Live version
 
-Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
+Currently running [here](https://www.willthefirst.com/).
 
 ### Development
 
@@ -10,11 +10,12 @@ Currently running on Netlify [here](https://epic-lovelace-3182e8.netlify.app/).
 * Run locally: `npm start`
 
 ### Todo
+- [ ] Better header
+- [ ] Back to homepage navigation
+- [ ] Contact
 - [ ] Target blank for links in posts
 - [ ] Figcaption shortcuts
     (then replace old ones)
-- [ ] Back to homepage navigation
-- [ ] Contact
 - [ ] Github embeds (then replace)
 - [x] DVD screensaver background
     - [x] Create a homepage directory structure with an "Enter" button that takes us to the real place.
