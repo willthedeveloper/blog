@@ -1,5 +1,5 @@
 ---
-pageTitle: 'theworldsbiggestgameoftelephoneever.com'
+pageTitle: "The World's Biggest Game Of Telephone Ever (.com)"
 ---
 
 If you don't want to read, here's the [live demo](http://web-telephone.herokuapp.com).

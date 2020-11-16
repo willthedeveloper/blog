@@ -10,9 +10,7 @@ Currently running [here](https://www.willthefirst.com/).
 * Run locally: `npm start`
 
 ### Todo
-- [ ] Better header
-- [ ] Back to homepage navigation
-- [ ] Contact
+- [ ] Contact, Github snippet
 - [ ] Target blank for links in posts
 - [ ] Figcaption shortcuts
     (then replace old ones)
@@ -27,11 +25,11 @@ Currently running [here](https://www.willthefirst.com/).
 - [x] Smaller/prettier h1s
 - [x] Make sure eleventy cleans out _site before rebuilding
     - Didn't really do it. Gulp and Eleventy have some concurrency that makes this difficult.
+- [x] Better header
 
 ### Ideas
 - [ ] An easy flow for notifying me of typos
 - [ ] A console easter egg
 
 ### Credits
-
 - Theme: [Bahunya](https://github.com/Kimeiga/bahunya)
