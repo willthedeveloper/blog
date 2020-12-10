@@ -10,7 +10,7 @@ Currently running [here](https://www.willthefirst.com/).
 * Run locally: `npm start`
 
 ### Todo
-- [ ] Contact, Github snippet
+- [ ] You might not need SSL
 - [ ] Target blank for links in posts
 - [ ] Figcaption shortcuts
     (then replace old ones)
@@ -26,6 +26,8 @@ Currently running [here](https://www.willthefirst.com/).
 - [x] Make sure eleventy cleans out _site before rebuilding
     - Didn't really do it. Gulp and Eleventy have some concurrency that makes this difficult.
 - [x] Better header
+- [x] Contact, Github snippet
+- [x] Mail-to form?
 
 ### Ideas
 - [ ] An easy flow for notifying me of typos
