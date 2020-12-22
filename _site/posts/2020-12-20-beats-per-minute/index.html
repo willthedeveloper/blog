@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A metronome using WebAudio and React.js</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css" />    
+    <style>body{margin:0}header{align-items:flex-start;text-align:left}
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>A metronome using WebAudio and React.js</h1>
+        <small>12-20-2020</small> 
+    </header>
+    <main>
+        <article>
+            <h2>Tl;dr</h2>
+<p>The working site is <a href="https://www.beatsperminute.click">https://www.beatsperminute.click</a>.</p>
+<p>You can also just click around below to try it out:</p>
+<iframe src="https://www.beatsperminute.click" title="Beats Per Minute" height="500px" width="100%"></iframe>
+<h2>Much harder than I thought it would be</h2>
+<p>I thought that this would be a nice opportunity to make a quick little UI in React. And, while the UI was fun and easy, it turned out that making a sound occur at perfect intervals in a web browser is <em>hard</em>. I'm going to describe some of the complexity below, but know that I owe much this work to <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's &quot;A Tale Of Two Clocks&quot; article</a>.</p>
+<h2>As easy as <code>setInterval()</code>, right?</h2>
+<p>No. NOOOO. No. A practiced musician will perceive even 10ms of latency, so I needed these clicks to be <em>precise</em>.</p>
+<p>Unfortunately, things like <code>setInterval()</code> and <code>setTimeout()</code> aren't all that precise. They run in the same thread that takes care of a million other things like rendering and layout calculation and idontknowwhatelse. So for example, if you found yourself resizing the page like crazy while trying to run the metronome, you'd hear imprecise timing. A metronome should to have rock solid time, and if it doesn't, you should throw a cymbal at it.</p>
+<iframe src="https://giphy.com/embed/fSAPjQtwbj0zK" width="100%" height="300px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<h2>A more complicated but more robust method</h2>
+<p>Th WebAudio API gives us a clock that is rock solid. Since it runs in its own thread, it won't be affected by other browser work. If you schedule a sound using the <code>play()</code> method and feed it the exact timecode of when you'd like to hear the sound, you can trust that it will play at the right time (or at least, with much lower latency that the previously mentioned method whose name I dare not speak).</p>
+<p>So, generally speaking, here's what we do: calculate the timecode for beats to come using the current time and the current bpm, and schedule sounds to occur at those times. You could do this 100 times, and then hear 100 beats occur at the right interval over time.</p>
+<p>All done, right?</p>
+<h2>What about when the user changes the tempo?</h2>
+<p>Ah. Here's the problem. If we schdule a bunch of beats at 88 bpm, but then the user decides to change the tempo, now we have a bunch of &quot;stale&quot; beats in our schedule that are still going to play. And typically, a metronome will adjust immediately to a tempo change. This all means that we can't schedule things too far ahead. And unfortunately, that <code>play()</code> method doesn't have a callback function that we can use to schedule the next event.</p>
+<p>To solve this problem, we need to go back to our old unreliable friend <code>setTimeout()</code>. Here's how we use it:
+- Set a timeout that will recur at a regularish interval (again, this is going to be innacurate), pretty much like a one-off <code>setInterval()</code>.
+- Every timeout, check the current time of our WebAudio clock, and schedule any beats that should play between now and the next timeout. Again, we know exactly when to schedule those beats by doing some math with the last beat timecode and the current BPM.
+- Because these timeouts might be late, make them overlap with one another in order to account for those errors. Then we can be sure that we never skip a beat.</p>
+<p>This way, we don't schedule too many beats in advance, and when we do, the beats reflect the most recent tempo setting.</p>
+<p>PS. As I write this, I realized you could do this another way that might be easier. Every time the tempo changes, throw out the schedule and replace with a new one that reflects the new tempo. Schedule 10 beats in advance, hell, make it 100. Seems like that would work too, but I'm probably missing something.</p>
+<h2>Making it progressive</h2>
+<p>Nobody is going to use a browser-based metronome on their phone. It shouldn't need an internet connection to work, and this was my first opportunity to make a progressive web app. Since I built this project on top of <a href="https://create-react-app.dev/">create-react-app</a>, it was absurdly easy to convert it to a PWA. You only need to cache all the resources, but beyond that there was no need for local storage or anything like that.</p>
+<h2>Conclusion</h2>
+<p>This probably would have been easier to do without React, frankly. I had to deal with lifecycle methods and blabla stuff that would have probably been easier to hand roll. But hey, here we are. Hope you enjoyed. Tell your friends.</p>
+
+        </article>
+    </main>
+    <footer>
+        <a href="/contact">Contact</a> |
+<a href="https://www.github.com/willthefirst">Github</a>
+    </footer>
+</body>
+
+</html>
